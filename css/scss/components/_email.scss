@@ -1,0 +1,30 @@
+.email {
+    a {
+        font-weight: 500;
+        font-size: 3.5rem;
+        text-decoration: none;
+        color: $color-primary;
+        display: flex;
+        align-items: center;
+        gap: 2.6rem;
+
+        @media #{$lg} {
+            font-size: 2rem;
+            gap: 1.9rem;
+        }
+
+        svg {
+            width: 4.2rem;
+            height: 3rem;
+
+            @media #{$lg} {
+                width: 2.3rem;
+                height: 1.7rem;
+            }
+    
+            path {
+                fill: $color-primary;
+            }
+        }
+    }
+}

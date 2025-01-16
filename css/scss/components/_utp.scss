@@ -1,0 +1,96 @@
+.utp {
+    position: relative;
+    background-color: $color-active;
+    padding: 6.6rem 0 6rem;
+    margin-bottom: 4.5rem;
+
+    @media #{$lg} {
+        padding: 1.7rem 0 6rem;
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 30rem;
+        background-color: $color-active;
+        transform: translateY(100%);
+        left: 0;
+        bottom: 1px;
+        z-index: -1;
+
+        @media #{$lg} {
+            height: 23rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 6rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 5rem;
+        }
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 28.5%;
+
+        @media #{$lg} {
+            width: 100%;
+        }
+
+        &:last-of-type {
+            &::before {
+                content: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 20rem;
+            background-color: $color-primary;
+            top: 2.8rem;
+            right: -3rem;
+
+            @media #{$lg} {
+                width: 100%;
+                height: 1px;
+                top: auto;
+                right: auto;
+                left: 0;
+                bottom: -1.8rem;
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 2.9rem;
+            color: $color-primary;
+            margin-bottom: 2.3rem;
+
+            @media #{$lg} {
+                font-size: 3rem;
+                line-height: 2.5rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: $color-primary;
+
+            @media #{$lg} {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

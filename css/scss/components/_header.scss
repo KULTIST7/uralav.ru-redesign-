@@ -1,0 +1,85 @@
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 11.8rem;
+    background-color: rgba($color: #fff, $alpha: 0.98);
+    box-shadow: 0 0.4rem 3rem 0 rgba($color: #000, $alpha: 0.1);
+    top: 0;
+    left: 0;
+
+    @media #{$lg} {
+        height: 6rem;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__logo {
+        max-width: 29rem;
+
+        @media #{$lg} {
+            max-width: 17.2rem;
+        }
+
+        img {
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .menu {
+        @media #{$lg} {
+            display: none;
+        }
+    }
+
+    .phone {
+        a {
+            font-size: 2.5rem;
+            padding-left: 0;
+
+            @media #{$lg} {
+                width: 3.1rem;
+                height: 3.1rem;
+                content: url(../images/svg/phone-header.svg);
+            }
+
+            &::before {
+                content: none;
+            }
+
+            span {
+                font-size: 2.5rem;
+                color: $color-active;
+            }
+        }
+    }
+
+    &__burger-button {
+        display: none;
+        width: 3.1rem;
+        height: 1.4rem;
+        background: url(../images/svg/burger-button.svg) no-repeat center;
+        background-size: contain;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+
+        @media #{$lg} {
+            display: initial;
+        }
+
+        &.active {
+            height: 2.4rem;
+            background: url(../images/svg/burger-close.svg) no-repeat center;
+            background-size: contain;
+        }
+    }
+}

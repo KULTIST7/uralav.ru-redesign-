@@ -1,0 +1,130 @@
+.docs {
+    position: relative;
+    background-color: $color-primary;
+    margin-bottom: 4.5rem;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 30rem;
+        background-color: $color-primary;
+        left: 0;
+        z-index: -1;
+
+        @media #{$lg} {
+            height: 24.7rem;
+        }
+    }
+
+    &::before {
+        transform: translateY(-100%);
+        top: 1px;
+    }
+
+    &::after {
+        transform: translateY(100%);
+        bottom: 1px;
+    }
+
+    .section-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1, h2 {
+        font-weight: 700;
+        font-size: 6.7rem;
+        color: $color-secondary;
+
+        @media #{$lg} {
+            font-size: 3.5rem;
+            line-height: 3rem;
+            width: min-content;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media #{$sm} {
+            padding-top: 3.8rem;
+        }
+    }
+
+    &__download {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        font-weight: 700;
+        font-size: 3.5rem;
+        text-decoration: none;
+        color: $color-active;
+        width: max-content;
+        padding-bottom: 1.2rem;
+        transition: all .1s linear;
+
+        @media #{$lg} {
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        &:hover {
+            color: $color-secondary;
+
+            svg path {
+                fill: $color-secondary;
+            }
+
+            &::before {
+                background-color: $color-secondary;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: calc(100% + 1rem);
+            height: 0.2rem;
+            background-color: $color-active;
+            transition: all .1s linear;
+            left: 0;
+            bottom: 0;
+        }
+
+        svg {
+            width: 2.2rem;
+            height: 2.2rem;
+
+            path {
+                fill: $color-active;
+                transition: all .1s linear;
+            }
+        }
+    }
+
+    &__image {
+        object-fit: contain;
+        object-position: center;
+        max-width: 30rem;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        @media #{$lg} {
+            max-width: 10.4rem;
+        }
+
+        @media #{$sm} {
+            position: absolute;
+            right: 0;
+            bottom: 3.8rem;
+        }
+    }
+}

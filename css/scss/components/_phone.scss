@@ -1,0 +1,44 @@
+.phone {
+    display: flex;
+
+    a {
+        position: relative;
+        font-weight: 500;
+        font-size: 3.5rem;
+        text-decoration: none;
+        color: $color-primary;
+        padding-left: 6.8rem;
+
+        @media #{$lg} {
+            font-size: 3rem;
+            padding-left: 4.1rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3.4rem;
+            height: 3.1rem;
+            background: url(../images/svg/phone.svg) no-repeat center;
+            background-size: contain;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+
+            @media #{$lg} {
+                width: 1.9rem;
+                height: 1.7rem;
+            }
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 3.5rem;
+            color: $color-primary;
+
+            @media #{$lg} {
+                font-size: 3rem;
+            }
+        }
+    }
+}

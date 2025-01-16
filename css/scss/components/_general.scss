@@ -1,0 +1,59 @@
+$lg: '(max-width: 992px)';
+$md: '(max-width: 768px)';
+$sm: '(max-width: 576px)';
+
+$font-main: 'Gilroy', Arial, sans-serif;
+
+$color-primary: #000;
+$color-secondary: #fff;
+$color-border: #B6C3CC;
+$color-active: #FED325;
+
+
+html {
+    font-size: calc(100vw / 1920 * 10);
+
+    @media #{$lg} {
+        font-size: calc(100vw / 768 * 10);
+    }
+
+    @media #{$md} {
+        font-size: calc(100vw / 576 * 10);
+    }
+
+    @media #{$sm} {
+        font-size: calc(100vw / 375 * 10);
+    }
+}
+
+body {
+    &.noscroll {
+        overflow-y: hidden;
+    }
+
+    * {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    main {
+        padding-top: 24rem;
+
+        @media #{$lg} {
+            padding-top: 8rem;
+        }
+    }
+} 
+
+.section-box {
+    max-width: 162rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @media #{$lg} {
+        width: calc(100% - 3rem);
+        margin: 0 1.5rem;
+    }
+}

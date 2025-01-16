@@ -1,0 +1,106 @@
+.button {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 6rem;
+    text-decoration: none;
+    color: $color-primary;
+    background-color: $color-active;
+    width: max-content;
+    padding: 0 7.3rem;
+    border: none;
+    border-radius: 3.25rem;
+    transition: all .1s linear;
+
+    @media #{$lg} {
+        font-size: 2.2rem;
+        line-height: 5rem;
+        padding: 0 4rem;
+    }
+
+    &:has(>svg) {
+        padding-right: 9.3rem;
+
+        @media #{$lg} {
+            padding-right: 7.2rem;
+        }
+    }
+
+    &:hover {
+        color: $color-secondary;
+
+        svg path {
+            fill: $color-secondary;
+        }
+    }
+
+    &:active {
+        color: $color-active;
+        background-color: $color-secondary;
+
+        svg path {
+            fill: $color-active;
+        }
+    }
+
+    &.button-shadow {
+        box-shadow: 0 0 3rem 0 rgba($color: #000, $alpha: 0.25);
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &.button-disabled {
+        color: #CECECE;
+        background-color: #EEEEEE;
+        pointer-events: none;
+        cursor: default;
+        box-shadow: none;
+
+        svg path {
+            fill: #CECECE;
+        }
+    }
+
+    &.button-border {
+        background-color: transparent;
+        border: 0.2rem solid $color-primary;
+
+        &:hover {
+            color: $color-primary;
+
+            svg path {
+                fill: $color-active;
+            }
+        }
+
+        &:active {
+            color: $color-active;
+            background-color: transparent;
+        }
+
+        &.button-disabled {
+            color: #CECECE;
+            border: 0.2rem solid #EEEEEE;
+        }
+    }
+
+    svg {
+        position: absolute;
+        width: 3.5rem;
+        height: 1.6rem;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 2.8rem;
+
+        @media #{$lg} {
+            right: 1.7rem;
+        }
+
+        path {
+            fill: $color-primary;
+            transition: all .1s linear;
+        }
+    }
+}

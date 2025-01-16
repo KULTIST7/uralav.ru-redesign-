@@ -1,0 +1,74 @@
+.order-form {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 1080;
+    background: url(../images/order-form-bg.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 12.2rem 12.2rem 0 0;
+    margin-bottom: -12.2rem;
+
+    @media #{$lg} {
+        display: flex;
+        align-items: end;
+        min-height: 85.3rem;
+        aspect-ratio: auto;
+        background-position: left;
+        border-radius: 4rem 4rem 0 0;
+        margin-bottom: -10.5rem;
+    }
+
+    @media #{$md} {
+        background: url(../images/order-form-bg-mobile.jpg) no-repeat center top;
+        background-size: cover;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: end;
+        padding-top: 12.3rem;
+
+        @media #{$lg} {
+            justify-content: center;
+            padding-top: 0;
+            margin-bottom: 17.2rem;
+        }
+
+        form {
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+    }
+
+    h1, h2 {
+        font-weight: 700;
+        font-size: 11rem;
+        line-height: 9rem;
+        color: $color-secondary;
+        margin-bottom: 6.5rem;
+
+        @media #{$lg} {
+            font-size: 6rem;
+            line-height: 5rem;
+            margin-bottom: 2.7rem;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-bottom: 4.2rem;
+
+        @media #{$lg} {
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    button {
+        @media #{$lg} {
+            width: 100%;
+        }
+    }
+}
