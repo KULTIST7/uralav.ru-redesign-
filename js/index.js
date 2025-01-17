@@ -7,6 +7,13 @@ $(document).ready(function () {
         }
     });
 
+    let scrollTop = 0;
+    window.addEventListener('scroll', function () {
+        if (!$('body').hasClass('noscroll')) {
+            scrollTop = window.scrollY;
+        }
+    });
+
     $('.header__burger-button').on('click', function () {
         const burger = $('.burger');
         const body = $('body');
@@ -14,9 +21,11 @@ $(document).ready(function () {
         if(!$(this).hasClass('active')) {
             burger.addClass('active');
             body.addClass('noscroll');
+            body.css('top', `-${scrollTop}px`);
         } else {
             burger.removeClass('active');
             body.removeClass('noscroll');
+            window.scroll(0, scrollTop);
         }
 
         $(this).toggleClass('active');
