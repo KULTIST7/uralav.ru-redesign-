@@ -477,6 +477,7 @@ body main {
   width: calc(100% - 6.4rem);
   height: calc(100dvh - 13.1rem);
   background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(0.5rem);
   padding: 3.2rem;
   border-radius: 4rem 4rem 0 0;
   top: 6.7rem;
