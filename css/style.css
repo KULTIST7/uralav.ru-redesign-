@@ -320,6 +320,7 @@ body main {
   height: 1.1rem;
   background: url(../images/svg/select-arrow.svg) no-repeat center;
   background-size: contain;
+  pointer-events: none;
   transform: translateY(-50%);
   top: 50%;
   right: 2.8rem;
