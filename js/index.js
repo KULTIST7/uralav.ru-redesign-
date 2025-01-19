@@ -30,4 +30,9 @@ $(document).ready(function () {
 
         $(this).toggleClass('active');
     });
+
+    $('.form select').select2({
+        placeholder: '--Выберите объект--',
+        width: 'element'
+    });
 });

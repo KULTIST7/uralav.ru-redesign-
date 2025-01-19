@@ -35,6 +35,7 @@
             transform: translateY(-50%);
             top: 50%;
             right: 2.8rem;
+            z-index: 1;
 
             @media #{$lg} {
                 width: 1.1rem;
@@ -53,6 +54,115 @@
             &::-ms-expand {
                 display: none;
             }
+
+            & + .select2 {
+
+                .select2 {
+                    &-selection {
+                        height: 6.5rem;
+                        background-color: rgba($color: #fff, $alpha: 0.6);
+                        border: none;
+                        border-radius: 3.7rem;
+
+                        @media #{$lg} {
+                            height: 5rem;
+                            border-radius: 2.5rem;
+                        }
+    
+                        &__rendered {
+                            font-size: 2.5rem;
+                            line-height: 6.5rem;
+                            color: $color-primary;
+                            padding: 0 2.8rem;
+
+                            @media #{$lg} {
+                                font-size: 2rem;
+                                line-height: 5rem;
+                                padding: 0 2rem;
+                            }
+                        }
+    
+                        &__placeholder {
+                            font-size: 2.5rem;
+                            color: $color-primary;
+
+                            @media #{$lg} {
+                                font-size: 2rem;
+                            }
+                        }
+    
+                        &__arrow {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.select2-container--open {
+                    .select2-selection {
+                        background-color: #fff;
+                        border-radius: 3.7rem 3.7rem 0 0;
+
+                        @media #{$lg} {
+                            border-radius: 2.5rem 2.5rem 0 0;
+                        }
+                    }
+                }
+
+                .select2-container--open {
+                    .select2 {
+                        &-selection {
+                            border-radius: 3.7rem 3.7rem 0 0;
+
+                            @media #{$lg} {
+                                border-radius: 2.5rem 2.5rem 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-dropdown {
+    background-color: rgba($color: #fff, $alpha: 0.98); 
+    border: none;
+    border-radius: 3.7rem;
+    z-index: 0;
+
+    @media #{$lg} {
+        border-radius: 2.5rem;
+    }
+
+    .select2-search {
+        display: none;
+    }
+
+    .select2-results__options {
+        padding: 2rem 5.6rem;
+
+        @media #{$lg} {
+            padding: 1rem 4rem;
+        }
+        
+        .select2-results__option--selectable {
+            font-size: 2.5rem;
+            color: $color-primary;
+            padding: 1rem 0;
+            transition: all .1s linear;
+
+            @media #{$lg} {
+                font-size: 2rem;
+            }
+        }
+
+        .select2-results__option--highlighted.select2-results__option--selectable {
+            background-color: transparent;
+            color: $color-active;
+        }
+
+        .select2-results__option--selected {
+            background-color: transparent;
         }
     }
 }
