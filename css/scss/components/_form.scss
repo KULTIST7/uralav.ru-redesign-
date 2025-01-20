@@ -57,6 +57,7 @@
             }
 
             & + .select2 {
+                width: 100% !important;
 
                 .select2 {
                     &-selection {
@@ -84,6 +85,7 @@
                         }
     
                         &__placeholder {
+                            font-weight: 500;
                             font-size: 2.5rem;
                             color: $color-primary;
 
@@ -128,11 +130,11 @@
 .select2-dropdown {
     background-color: rgba($color: #fff, $alpha: 0.98); 
     border: none;
-    border-radius: 3.7rem;
-    z-index: 0;
+    border-radius: 0 0 3.7rem 3.7rem;
+    z-index: 10000;
 
     @media #{$lg} {
-        border-radius: 2.5rem;
+        border-radius: 0 0 2.5rem 2.5rem;
     }
 
     .select2-search {
@@ -147,6 +149,7 @@
         }
         
         .select2-results__option--selectable {
+            font-weight: 500;
             font-size: 2.5rem;
             color: $color-primary;
             padding: 1rem 0;

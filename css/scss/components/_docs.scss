@@ -33,6 +33,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 130rem;
+
+        @media #{$lg} {
+            width: calc(100% - 3rem);
+        }
     }
 
     h1, h2 {

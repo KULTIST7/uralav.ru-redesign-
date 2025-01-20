@@ -127,13 +127,19 @@ body main {
 }
 .menu ul li a {
   position: relative;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.8rem;
   color: #000;
   display: flex;
   align-items: center;
+  width: max-content;
   height: 100%;
   text-decoration: none;
+}
+@media (max-width: 992px) {
+  .menu ul li a {
+    font-weight: 500;
+  }
 }
 .menu ul li a::before {
   content: "";
@@ -343,6 +349,9 @@ body main {
 .form .select select::-ms-expand {
   display: none;
 }
+.form .select select + .select2 {
+  width: 100% !important;
+}
 .form .select select + .select2 .select2-selection {
   height: 6.5rem;
   background-color: rgba(255, 255, 255, 0.6);
@@ -369,6 +378,7 @@ body main {
   }
 }
 .form .select select + .select2 .select2-selection__placeholder {
+  font-weight: 500;
   font-size: 2.5rem;
   color: #000;
 }
@@ -401,12 +411,12 @@ body main {
 .select2-dropdown {
   background-color: rgba(255, 255, 255, 0.98);
   border: none;
-  border-radius: 3.7rem;
-  z-index: 0;
+  border-radius: 0 0 3.7rem 3.7rem;
+  z-index: 10000;
 }
 @media (max-width: 992px) {
   .select2-dropdown {
-    border-radius: 2.5rem;
+    border-radius: 0 0 2.5rem 2.5rem;
   }
 }
 .select2-dropdown .select2-search {
@@ -421,6 +431,7 @@ body main {
   }
 }
 .select2-dropdown .select2-results__options .select2-results__option--selectable {
+  font-weight: 500;
   font-size: 2.5rem;
   color: #000;
   padding: 1rem 0;
@@ -530,6 +541,7 @@ body main {
   }
 }
 .header .phone a {
+  font-weight: 700;
   font-size: 2.5rem;
   padding-left: 0;
 }
@@ -544,6 +556,7 @@ body main {
   content: none;
 }
 .header .phone a span {
+  font-weight: 700;
   font-size: 2.5rem;
   color: #FED325;
 }
@@ -922,6 +935,7 @@ body main {
   font-size: 2.2rem;
   color: #fff;
   max-width: 93rem;
+  min-height: 15.2rem;
   margin-bottom: 5.7rem;
 }
 @media (max-width: 992px) {
@@ -994,6 +1008,12 @@ body main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 130rem;
+}
+@media (max-width: 992px) {
+  .docs .section-box {
+    width: calc(100% - 3rem);
+  }
 }
 .docs h1, .docs h2 {
   font-weight: 700;
@@ -1206,4 +1226,86 @@ body main {
     width: 100%;
     gap: 1.5rem;
   }
+}
+
+.modal-form {
+  width: 40rem;
+  background: url(../images/order-form-bg-mobile.jpg) no-repeat top center;
+  background-size: cover;
+  padding: 0;
+  border-radius: 4rem;
+}
+@media (max-width: 576px) {
+  .modal-form {
+    width: 34.5rem;
+  }
+}
+.modal-form h1, .modal-form h2 {
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0.4rem 4rem rgba(0, 0, 0, 0.98);
+  margin-bottom: 2.7rem;
+}
+.modal-form form {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 6rem);
+  padding-top: 20rem;
+  margin: 3rem;
+}
+@media (max-width: 576px) {
+  .modal-form form {
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+  }
+}
+.modal-form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.modal-form__inputs input {
+  font-size: 2rem;
+  line-height: 5rem;
+  height: 5rem;
+  padding: 0 2rem;
+}
+.modal-form__inputs .select::before {
+  width: 1.1rem;
+  height: 0.8rem;
+  right: 2.2rem;
+}
+.modal-form__inputs .select2-selection {
+  height: 5rem !important;
+}
+.modal-form__inputs .select2-selection__rendered {
+  font-size: 2rem !important;
+  line-height: 5rem !important;
+  padding: 0 2rem !important;
+}
+.modal-form__inputs .select2-selection__placeholder {
+  font-size: 2rem !important;
+}
+.modal-form__inputs .select2.select2-container--open .select2-selection {
+  border-radius: 2.5rem 2.5rem 0 0 !important;
+}
+.modal-form .button {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+.modal-form .f-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../images/svg/modal-close-button.svg) no-repeat center;
+  background-size: contain;
+  top: 2.6rem !important;
+  right: 2.6rem !important;
+}
+.modal-form .f-button svg {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
